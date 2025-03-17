@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { useLoaderData } from "react-router-dom";
 import "../styles/about.css"
 
+
 type AboutData ={
     title: string;
     description: string;
