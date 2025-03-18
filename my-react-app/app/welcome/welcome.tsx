@@ -1,7 +1,18 @@
+import { useState } from "react";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+//import { useState } from "react";
+
+const user = {
+    name: "Egor",
+    age: 30,
+    isBuse: true,
+  
+}
 
 export function Welcome() {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -23,6 +34,13 @@ export function Welcome() {
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
               What&apos;s next?
+              Привет, {user.name}!
+              {user.isBuse ? "Админи занят, не трогайте его" : "Дозволяю войти"}
+              
+              <button className={`p-3 rounded-md ${isClicked ? "bg-green-500": "bg-red-500"}`} onClick={() => setIsClicked(!isClicked)}>
+                  {isClicked ? "Такнуть админа" : "Оставить админа в покое"}
+              </button>
+              {user.age<18 ? "Еще рано" : "\nВперед падаван! "}
             </p>
             <ul>
               {resources.map(({ href, text, icon }) => (
