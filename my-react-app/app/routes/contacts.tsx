@@ -1,5 +1,7 @@
 import type { Route } from "./+types/home";
 
+interface 
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Контакты!" },
