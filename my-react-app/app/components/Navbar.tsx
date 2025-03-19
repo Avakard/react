@@ -14,6 +14,7 @@ const Navbar = () =>{
                 <li><NavLink to="/contacts">Контакты</NavLink></li>
                 <li><NavLink to="/jobs">Вакансии</NavLink></li>
                 <li><NavLink to="/about">О нас</NavLink></li>
+                <li><NavLink to="/login">Войти</NavLink></li>
             </ul>
         </nav>
         <ThemeSwitcher />

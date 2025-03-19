@@ -28,6 +28,7 @@ export default [
     route("/contacts","routes/contacts.tsx"),
     route("/jobs","routes/jobs.tsx"),
     route("/private","routes/private.tsx"),
+    route("/login","routes/login.tsx"),
         //,{
            // loader: checkAuth,
   //  }),
