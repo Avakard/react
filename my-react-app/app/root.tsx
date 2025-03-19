@@ -41,7 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <Navbar />
-        <ThemeSwitcher />
+       
         {children}
         <ScrollRestoration />
         <Scripts />
