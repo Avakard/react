@@ -17,11 +17,11 @@ type AboutData ={
     reviewers: {name: string; com: string; image: string}[];
 }
 
-type AboutData2 ={
+/*type AboutData2 ={
     title: string;
     description: string;
     team: {name: string; com: string; image: string}[];
-}
+}*/
 
 export function loader(): AboutData {
     return {
@@ -50,7 +50,7 @@ export function loader(): AboutData {
     }    
 }
 
-export function loader2(): AboutData2 {
+/*export function loader2(): AboutData2 {
     return {
         title: "Отзывы",
         description: "Отзывы!",
@@ -65,7 +65,7 @@ export function loader2(): AboutData2 {
             {name: "Егор1", com:"FullStack", image: Egor},
         ]
     }    
-}
+}*/
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -76,7 +76,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function About() {
   const data = useLoaderData() as AboutData;
-  const data2 = useLoaderData() as AboutData2;
+ // const data2 = useLoaderData() as AboutData2;
     return (
     <section className="min-h-screen flex flex-col items-center justify-center">
         {/* Здесь заголовок */}

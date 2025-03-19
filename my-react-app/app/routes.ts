@@ -1,6 +1,6 @@
 import { type RouteConfig, route } from "@react-router/dev/routes";
-import { loader as aboutLoader} from "./routes/about";
-import { loader2 as aboutLoader2} from "./routes/about";
+//import { loader as aboutLoader} from "./routes/about";
+//import { loader2 as aboutLoader2} from "./routes/about";
 import type { LoaderFunction } from "react-router";
 
 import { createBrowserRouter, redirect } from "react-router-dom";
@@ -14,11 +14,11 @@ import PrivatePage from "./routes/private";
     return null;
 }
 */
-type CustomConfig = RouteConfig & {loader?: LoaderFunction}
+//type CustomConfig = RouteConfig & {loader?: LoaderFunction}
 
 const combinatedAboutLoder =() =>({
-    ...aboutLoader(),
-    ...aboutLoader2()
+//    ...aboutLoader(),
+  //  ...aboutLoader2()
 });
 
 export default [
@@ -29,6 +29,7 @@ export default [
     route("/jobs","routes/jobs.tsx"),
     route("/private","routes/private.tsx"),
     route("/login","routes/login.tsx"),
+
         //,{
            // loader: checkAuth,
   //  }),
