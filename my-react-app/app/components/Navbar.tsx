@@ -2,15 +2,24 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/navbar.css"
 import ThemeSwitcher from "./ThemeSwitcher";
 import { isAuthenticated, logout } from "../services/auth";
+import { useAppDispatch, useAppSelector } from "../store/hook";
+import { useState } from "react";
 
 
 export default function Navbar(){
     const navigate = useNavigate();
+ /*   const dispatch = useAppDispatch();
+
+    const isAuth = useAppSelector((state) => state.auth.isAuth)
+
+    const [username, setUsername]= useState("");
+    const [password, setPassword]= useState("");
+*/
     function handleLogout(){
-        logout();
-        
+        logout();        
         navigate("/");
     }
+
     return (
         <div>
 

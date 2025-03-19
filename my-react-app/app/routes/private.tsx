@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import React from "react";
 import { checkAuth, isAuthenticated } from "../services/auth";
 import { Navigate } from "react-router-dom";
+import { useAppSelector } from "~/store/hook";
+
 
 interface UserDate{
     name: string,
@@ -14,9 +16,11 @@ interface LoderData {
 }
 
 export default function PrivatePage(){    
-    checkAuth()
+    const isAuth = useAppSelector((state) => state.auth.isAuth);
+      //  checkAuth()
     //const data = "какая-то функция загрузчика"
-    if(!isAuthenticated()){
+   // if(!isAuthenticated()){
+    if(!isAuth){
         return <Navigate to="/" replace />
     }
     return (
